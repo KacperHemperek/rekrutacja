@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="card m-3">
-      <h2 class="card-header">POSTS</h2>
+      <h2 class="card-header">NEWS</h2>
       <div class="card-body">
         <span class="searches">
           <Search searchName="name" />
@@ -24,11 +24,13 @@ export default {
       pageOfItems: [],
     };
   },
+
   name: "App",
   components: {
     Article,
     Search,
   },
+
   computed: {
     posts() {
       const state = this.$store.state;
@@ -39,20 +41,17 @@ export default {
       const state = this.$store.state;
       return state.filteredPosts;
     },
-    // checkData() {
-    //   const state = this.$store.state;
-    //   return state.searching;
-    // },
-  },
-  created() {
-    this.$store.dispatch("fetchUsers");
-    this.$store.dispatch("fetchPosts");
   },
 
   methods: {
     onChangePage(pageOfItems) {
       this.pageOfItems = pageOfItems;
     },
+  },
+
+  created() {
+    this.$store.dispatch("fetchUsers");
+    this.$store.dispatch("fetchPosts");
   },
 };
 </script>

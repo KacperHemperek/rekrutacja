@@ -1,18 +1,18 @@
 <template>
   <input
     type="search"
-    :id="searchName"
-    :placeholder="searchName"
+    id="searchName"
+    placeholder="Search by name"
     @keyup="onSearchChange()"
     v-model="input"
     class="search"
+    value=""
   />
 </template>
 
 <script>
 export default {
   name: "Search",
-  props: ["searchName"],
   data() {
     return {
       input: "",

@@ -53,12 +53,15 @@
       font-size: clamp(18px, 1vw, 30px);
     }
 
+    .title::first-letter {
+      text-transform: capitalize;
+    }
+
     h2 {
       font-size: clamp(25px, 1.7vw, 40px);
     }
 
     h3 {
-      word-break: keep-all;
       font-size: clamp(20px, 1.3vw, 30px);
     }
 
