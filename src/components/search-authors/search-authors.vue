@@ -2,7 +2,7 @@
   <input
     type="search"
     id="searchName"
-    placeholder="Search by name"
+    placeholder="Search by author's name"
     @keyup="onSearchChange()"
     v-model="input"
     class="search"
